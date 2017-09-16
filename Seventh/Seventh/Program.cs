@@ -100,7 +100,7 @@ namespace Seventh
         }//Доопределение до монотонной
         static void Main(string[] args)
         {
-            MyFunction = FunctionGenerator(8);
+            MyFunction = FunctionGenerator(8);//Генерация стандартной функции из 8 значений (программа будет работать при любом положительном целочисленном количестве значений).
             FunctionAddition(MyFunction);
             Console.ReadLine();
         }
