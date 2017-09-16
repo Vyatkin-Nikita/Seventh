@@ -62,7 +62,12 @@ namespace Seventh
                 if (func[i] == -1) { PassValues++; }
             }
 
-            if (PassValues==0) { Console.WriteLine("Функция уже доопределена."); return; }
+            if (PassValues==0)
+            { Console.WriteLine("Функция уже доопределена.");
+                if (MonotonyCheking(func) == false) { Console.WriteLine("Данная функцию немонотонная."); }
+                else { Console.WriteLine("Данная функцию монотонная."); }
+                return;
+            }
 
             string[] vectors = new string[(int)Math.Pow(2, PassValues)];//На основе количества пропусков определяется количество вариантов их заполнения
             for (int i = 0; i < vectors.Length; i++)
